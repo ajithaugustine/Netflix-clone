@@ -23,7 +23,7 @@ const [index,setIndex] = useState(0)
 
       <Home movieindex={index} />
       <Posters title='Trending' url={trending_url} selectmovie={index=> setIndex(index)} />
-      <Posters title='Toprated' url={toprated_url} ok/>
+      <Posters title='Toprated' url={toprated_url} ok selectmovie={index=> setIndex(index)}   />
       </Route>
 
        <Route path='/favorites'> <Favorites/> </Route>

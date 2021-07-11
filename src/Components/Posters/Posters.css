@@ -5,16 +5,29 @@
    
 }
 .posters{
-   
     display: flex;
     padding: 20px;
+    overflow-y: hidden;
     overflow-x: scroll;
 }
-.posters::-webkit-scrollbar{
-    width: 500px;
+
+ .posters::-webkit-scrollbar {
+      height: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 10px rgb(2, 2, 2); 
+    }
+     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: rgb(236, 227, 227); 
+      
+    }
     
-  
-}
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #05e8f0; 
+    }
 
 .poster{
     cursor: pointer;
@@ -81,6 +94,7 @@ h2{
     border: 2px solid red;
     margin-left: 5rem;
     margin-right: 5rem;
+    margin-top: 5px;
 
 }
 .closebtn{
