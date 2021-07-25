@@ -3,6 +3,7 @@ import Youtube from 'react-youtube'
 import './Posters.css'
 import {img_url,api_key} from '../../Constance'
 import axios from '../Services/axios'
+import { Button } from 'react-bootstrap';
 
 
 
@@ -51,13 +52,15 @@ function Posters(props) {
                         return(
                             <div className='card' key={index} >
                                  <img className={props.ok? 'poster2' : 'poster'} onClick={()=>props.selectmovie(index)} src={`${img_url+movie.poster_path }`} alt=""  />
-                                 <button onClick={()=>trailers(movie.id)} className={props.ok ?'trilerbtn2' :'trilerbtn1'}>watch trailer</button>
+                                 {/* <button onClick={()=>trailers(movie.id)} className={props.ok ?'trilerbtn2' :'trilerbtn1'}>watch trailer</button> */}
+                                 <Button onClick={()=>trailers(movie.id)} className={props.ok ?'trilerbtn2' :'trilerbtn1'}>watch trailer</Button>
                             </div> )}) 
                         } 
             </div>
                             {box && <div className="trailers">
                                 { urlid &&    <Youtube opts={opts} videoId={urlid}/>} 
-                                <button className='closebtn' onClick={closebox}>Close</button>
+                                {/* <button className='closebtn' onClick={closebox}>Close</button> */}
+                                <Button className='closebtn' onClick={closebox}>Close</Button>
                                 </div> }
         </div>
     )
